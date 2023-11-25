@@ -1,0 +1,14 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\Users\\ray_b\\.azurelogicapps\\dependencies\\DotNetSDK;${env:PATH}"
+    },
+    "omnisharp.dotNetCliPaths": [
+        "C:\\Users\\ray_b\\.azurelogicapps\\dependencies\\DotNetSDK"
+    ],
+    "azureFunctions.deploySubpath": "python\\3.11\\AzureFunctions\\Demo",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 2
+}
