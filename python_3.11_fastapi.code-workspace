@@ -5,11 +5,5 @@
     }
   ],
   "settings": {
-    "terminal.integrated.env.windows": {
-      "PATH": "C:\\Users\\ray_b\\.azurelogicapps\\dependencies\\DotNetSDK;${env:PATH}"
-    },
-    "omnisharp.dotNetCliPaths": [
-      "C:\\Users\\ray_b\\.azurelogicapps\\dependencies\\DotNetSDK"
-    ]
   }
 }
