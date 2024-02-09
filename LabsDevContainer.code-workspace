@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "python/3.11/AzureFunctions/ServiceBusQueueTriggerSample"
+		},
+		{
+			"path": "python/3.11/AzureFunctions/ServiceBusTopicTriggerSample"
+		},
+		{
+			"path": "python/3.11/FastApi/CacheApi"
+		},
+		{
+			"path": ".net/8.0/AzureFunctions/ServiceBusTopicTriggerSample"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	},
+	"launch": {
+        "configurations": [],
+        "compounds": [
+            {
+                "name": "Attach to all apps",
+                "configurations": [
+                    "AttachDotnetServiceBusTopicTriggerSample",
+                    "AttachPythonServiceBusQueueTriggerSample",
+					"AttachPythonServiceBusTopicTriggerSample",
+					"AttachPythonFastCacheAPI"
+                ]
+            }
+        ]
+    }
+}
