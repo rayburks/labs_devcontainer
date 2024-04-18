@@ -1,36 +1,47 @@
-# Devcontainer
 
-## System Requirements
 
-This repo requires Docker installed locally.
+# Azure Functions
 
-## Installation
+## host.conf
 
-To get started, follow these steps:
-- Install and configure Docker for your operating system
-- Install VS Code
-- Install VS Code Extension DevContainer
+v1 or v2
 
-### Windows / macOS
+related for each function app.
 
-- Install Docker Desktop for Mac/Windows (https://www.docker.com/products/docker-desktop)
+### Overwride host.conf
 
-### Linux
+**Environment Variable which starts with AzureFunctionsJobHost__**
+For instance: AzureFunctionsJobHost__logging__applicationInsights__samplingSettings__isEnabled":"false"
 
-Follow the official install instructions for Docker CE/EE(https://docs.docker.com/install/#supported-platforms). 
-If you use Docker Compose, follow the Docker Compose install directions(https://docs.docker.com/compose/install/).
+### extensionBundle
 
-# Start using Devcontainer in vscode
+```
+{
+    "version": "2.0",
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[4.0.0, 5.0.0)"
+    }
+}
+```
 
-## Try a development container
+### Logging
 
-Want to try out a dev container in a quick sample repo
+- ApplicationInsights und Console mit dabei
 
-## Open an existing folder in a container
+```
+"logging": {
+    "fileLoggingMode": "debugOnly",
+    "logLevel": {
+      "Function.MyFunction": "Information",
+      "default": "None"
+    },
+    "console": {
+        ...
+    },
+    "applicationInsights": {
+        ...
+    }
+}
+```
 
-Want to add a dev container to one of your existing locally cloned projects
-F1 => Dev Containers: Open Folder in Container => select folder and devcontainer image and start an container
-
-## Open a git repo or PR in an isolated container volume
-
-Want to work with an isolated copy of a repo, i.e. to review a PR or investigate a branch without impacting your local work
